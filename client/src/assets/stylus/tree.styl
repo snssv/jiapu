@@ -1,0 +1,600 @@
+.det_top
+    text-align center
+    padding .4rem .1rem .2rem .1rem
+    .title
+        color #999
+        font-size .3rem
+        font-weight 500
+        b
+            margin 0 5px
+            color #eee
+    .ul
+        font-size .16rem
+        padding-top .2rem
+        color #ccc
+    .li
+        display inline-block
+        &:last-child
+            margin-left .3rem
+    .btn
+        display inline-block
+        margin .03rem
+        min-width .6rem
+
+.dialog_backup
+    position fixed
+    z-index 10009
+    top 0
+    right 0
+    bottom 0
+    left 0
+    transition .2s
+    &:not(.show)
+        transform translate3d(0,-200%,0)
+        opacity 0
+    &.intop
+        height 3rem
+        .bg
+            display none
+    .bg
+        position absolute
+        width 100%
+        height 100%
+        background #000a
+    .btn_group
+        position absolute
+        right .1rem
+        top .1rem
+        padding-right .4rem
+        .btn:not(:first-child)
+            margin-left .1rem
+        i
+            right .05rem
+            top .05rem
+            position absolute
+    .head
+        padding .1rem
+        line-height .3rem
+        height .4rem
+        font-size .14rem
+        text-align left
+    .cont
+        position absolute
+        width 5rem
+        max-width 100%
+        background #000
+        top 3rem
+        right 62%
+        border-radius 4px
+        transform translate3d(50%,0,0)
+        @media (max-width 768px)
+            right 0
+            transform none
+
+        .con
+            padding .05rem .1rem
+        .inp
+            background #4444
+            font-size .12rem
+    .back_online
+        top .6rem
+        box-shadow 0 2px 5px #3c64
+        .con
+            height 2rem
+            overflow auto
+            text-align left
+            margin-bottom .05rem
+        b
+            display inline-block
+            padding .1rem
+            margin .05rem
+            font-size .12rem
+            border 1px solid #fff2
+            border-radius 3px
+            cursor pointer
+            &:hover
+                border-color #044a03
+            &.active
+                color #29a207
+                border-color #044a03
+
+.wechat
+    height 2rem
+    margin .3rem
+    background no-repeat url("../images/wechat.svg") center/contain
+    transition .3s ease-out
+    &:not(.show)
+        opacity 0
+.navtip
+    margin 2rem auto 0 auto
+    display table
+    background #1c4354
+    border 1px solid #000
+    padding .1rem .2rem
+    border-radius .1rem
+    text-align center
+    h3
+        margin .1rem 0
+    .ol
+        padding 0
+        .li
+            display inline-table
+            width 1.5rem
+            padding-left .2rem
+            line-height 1.8
+            text-align left
+
+.left
+    .wrap
+        padding .1rem
+        max-width 8rem
+        margin 0 auto
+.treebox_head
+    border-bottom 1px solid #2b8f2a22
+    background #0e1c2c
+    height .5rem
+    padding .1rem
+    position relative
+    sub
+        position absolute
+        margin .05rem 0 0 .1rem
+        font-size .8em
+    .fr
+        position absolute
+        top .1rem
+        right .2rem
+    .manage_form
+        position absolute
+        z-index 10009
+        width 3.6rem
+        right -.2rem
+        top -.1rem
+        border 1px solid #000
+        background #080f14
+        box-shadow -.1rem .1rem .3rem #000
+        padding .1rem
+        transition .2s
+        overflow hidden
+        &:not(.show)
+            opacity 0
+            max-height 1px
+        .icon-close
+            position absolute
+            right .1rem
+            cursor pointer
+            &:hover
+                opacity .5
+        .inp
+            height 1rem
+        .head
+            font-weight bold
+            font-size .16rem
+            color #999
+            padding-bottom .05rem
+
+.treebox
+    font-size 14px
+    font-weight 500
+    overflow auto
+    scrollbar-color red
+    background #0e1c2c
+    padding 1rem 1.1rem .3rem 1.1rem
+    position relative
+    min-height 30vh
+    @media (min-width 600px)
+        max-height 70vh
+    .extend_handle
+        position absolute
+        left 50%
+        bottom 15px
+        box-sizing content-box
+        width 10px
+        height 10px
+        padding 10px
+        transform translate3d(-15px,0,0)
+        cursor pointer
+        &:before
+            content ""
+            display block
+            width 100%
+            height 100%
+            box-sizing border-box
+            border 1px solid
+            border-color #ccc #ccc transparent transparent
+            transform rotateZ(135deg)
+            transform-origin 50% 50% 0
+            transition transform ease 300ms
+        &:hover
+            &:before
+                border-color #333 #333 transparent transparent
+
+    table
+        border-collapse separate
+        border-spacing 0
+        margin 0 auto
+    td
+        position relative
+        vertical-align top
+        //padding 0 0 40px 0
+        text-align center
+    .extend
+        .extend_handle
+            &:before
+                transform rotateZ(-45deg)
+        &::after
+            content ""
+            position absolute
+            left 50%
+            bottom 15px
+            height 15px
+            border-left 1px solid #778
+            transform translate3d(-1px,0,0)
+    .childLevel
+        &::before
+            content ""
+            position absolute
+            left 50%
+            bottom 100%
+            height 15px
+            border-left 1px solid #778
+            transform translate3d(-1px,0,0)
+        &::after
+            content ""
+            position absolute
+            left 0
+            right 0
+            top -15px
+            border-top 1px solid #778
+        &:first-child
+            &:after
+                left 50%
+                height 15px
+                border 1px solid
+                border-color #778 transparent transparent #778
+                border-radius 6px 0 0 0
+                transform translate3d(1px,0,0)
+            &.childLevel
+                &:last-child
+                    &::after
+                        left auto
+                        border-radius 0
+                        border-color transparent transparent transparent #778
+                        transform translate3d(1px,0,0)
+        &:last-child
+            &:after
+                right 50%
+                height 15px
+                border 1px solid
+                border-color #778 #778 transparent transparent
+                border-radius 0 6px 0 0
+                transform translate3d(-1px,0,0)
+    .childLevel:first-child:before, .childLevel:last-child:before
+        display none
+    .node
+        position relative
+        display inline-block
+        margin 0 5px
+        box-sizing border-box
+        text-align center
+
+    .menu
+        position fixed
+        z-index 5
+        left 0
+        transition .2s
+        margin-top -.4rem
+        transform translate3d(-100%,0,0)
+        .li
+            padding .1rem .15rem
+            width 1rem
+            background #0e5a24
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+            cursor pointer
+            &:not(:last-child)
+                border-bottom 1px solid #111
+            &:hover
+                background #0b7333
+            @media (max-width 600px)
+                font-size .14rem
+
+
+    &.isEdit
+        .menu
+            transform translate3d(0,0,0)
+        .name
+            opacity .6
+            &.inset
+                opacity 1
+                outline 1px solid #fff
+                box-shadow 0 0 5px #ffffff
+                &.link
+                    outline-color #fff8
+                    box-shadow 0 0 5px #fff4
+    .name
+        display inline-block
+        margin-bottom .4rem
+        height .3rem
+        line-height .3rem
+        width .7rem
+        overflow hidden
+        white-space nowrap
+        border-radius 3px
+        text-overflow ellipsis
+        background #134d7c
+        color #eee
+        position relative
+        cursor pointer
+        padding 0
+        @media (max-width 768px)
+            line-height .32rem
+        &:hover
+            opacity .8
+        &.root
+            color #fff
+            background #ea8d00
+        &.sex0
+            background #840d67
+        &.mate
+            margin-left 2px
+        &.mate
+            &::before
+                content ''
+                position absolute
+                z-index 2
+                width 1px
+                height 1px
+                border 4px solid #000
+                border-color #0e1c2c #0000 #0000 #0e1c2c
+                left 0
+                top 0
+        &.godson
+            &::before
+                content ''
+                position absolute
+                z-index 2
+                width 1px
+                height 1px
+                border 4px solid #000
+                border-color #0000 #0e1c2c #0e1c2c #0000
+                bottom  0
+                right  0
+    .tips
+        position absolute
+        background #012
+        z-index 3
+        width 1.6rem
+        padding .1rem
+        text-align left
+        margin .35rem 0 0 -.5rem
+        border-radius 5px
+        bottom .8rem
+        overflow hidden
+        height 1px
+        opacity 0
+        transition .2s
+        &::before
+            content ''
+            position absolute
+            left .75rem
+            bottom .1rem
+            border 10px solid #012
+            border-color #012 transparent transparent #012
+            transform rotateZ(-135deg) translate3d(-10px, -10px, 0)
+        .more
+            position absolute
+            cursor pointer
+            right .1rem
+            top .1rem
+            color #0a446f
+            &:hover
+                opacity .7
+        .li
+            opacity .6
+        .namex
+            font-size .16rem
+            font-weight bold
+    .node
+        white-space nowrap
+    .people_x
+        display inline-block
+    .people_x:hover > .tips
+        overflow visible
+        opacity 1
+        height auto
+
+.dialogTree
+    position fixed
+    z-index 10008
+    top 0
+    left 0
+    width 100%
+    height 100%
+    transition .2s
+    &:not(.show)
+        transform translate3d(0,300%,0)
+    .bg
+        position absolute
+        z-index 1
+        width 100%
+        height 100%
+        background #111e
+    .wrap
+        position absolute
+        z-index 2
+        width 6rem
+        max-width 100%
+        top 45%
+        left 50%
+        transform translate3d(-50%,-50%,0)
+        background #131a21
+        border 1px solid #000
+        border-radius 4px
+        box-shadow 0 0 .2rem #000
+        > .icon-close
+            position absolute
+            top .15rem
+            right .2rem
+            opacity .2
+            &:hover
+                opacity .6
+        .head
+            padding 0 .2rem
+            height .5rem
+            line-height .5rem
+            background #0002
+            text-align center
+            font-weight bold
+            color #999
+            *
+                margin 0
+                vertical-align middle
+        .cont
+            padding .2rem
+            min-height 1rem
+
+        dl
+            margin 0
+            padding .1rem 0 0 0
+            display table
+            width 100%
+            dt,dd
+                display table-cell
+            dt
+                width .4rem
+                vertical-align middle
+                font-size .14rem
+                white-space nowrap
+                &:nth-child(3)
+                    width .6rem
+                    padding-left .2rem
+        dd
+            width 2rem
+            position relative
+            &.col3
+                width 4.6rem
+        .inp
+            height .36rem
+        textarea.inp
+            height .5rem
+        .choose
+            position absolute
+            z-index 3
+            &.clans_set
+                right auto
+                left 0
+
+        .people_set
+            width 100%
+            background #0c151b
+            border 1px solid #000
+            box-shadow 0 0 9px #000c
+            transition .2s
+            overflow hidden
+            &:not(.show)
+                max-height 1px
+                opacity 0
+            .icon-close
+                position absolute
+                margin .05rem
+            .head2
+                padding .1rem .1rem .1rem .35rem
+                font-size .12rem
+                line-height 1.2
+                background #0002
+            .con
+                min-height 2rem
+                max-height 50vh
+                overflow-y auto
+                .li
+                    position relative
+                    height .5rem
+                    white-space nowrap
+                    &:not(:last-child)
+                        border-bottom 1px solid #eee1
+                    dl
+                        width auto
+                        padding .08rem .1rem
+                    dt
+                        width .6rem
+                        white-space normal
+                        font-size .16rem
+                        font-weight bold
+                        line-height 1
+                        vertical-align middle
+                        cursor pointer
+                        &:hover
+                            opacity .8
+                    dd
+                        font-size .12rem
+                        padding 0
+                        p
+                            margin 0
+
+                .btn
+                    position absolute
+                    right .1rem
+                    top .1rem
+
+
+
+        .foot
+            padding .1rem .2rem
+            border-top 1px dashed #fff1
+            text-align right
+            .btn
+                display inline-block
+                margin-left .2rem
+.sex_set
+    width 100%
+    border 1px solid #000
+    border-radius 0 0 4px 4px
+    overflow hidden
+    margin-top -2px
+    position absolute
+    z-index 9
+    box-shadow 0 0 9px #000c
+    transition .2s
+    &:not(.show)
+        max-height 1px
+        opacity 0
+    .li
+        padding .1rem .2rem
+        background #0c151b
+        cursor pointer
+        &:not(:last-child)
+            border-bottom 1px solid #0008
+        &:hover
+            background #0d3b27
+.hover
+    cursor pointer
+    transition .2s
+    &:hover
+        opacity .7
+.manage_list
+    .li
+        border-bottom 1px solid #fff1
+        padding .1rem 0
+        position relative
+        .time
+            opacity .7
+            margin-right .2rem
+        .tit
+            font-size .16rem
+            height .3rem
+        @media (max-width 768px)
+            .tit
+                height .5rem
+                font-size .14rem
+                .time
+                    display block
+                    height .2rem
+            .con
+                font-size .16rem
+        .btn_group
+            position absolute
+            right 0
+            .btn
+                width .9rem
+                margin 0 0 0 .2rem

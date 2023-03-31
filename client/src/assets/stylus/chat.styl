@@ -1,0 +1,678 @@
+.ischat
+    header
+        display none
+    .header
+        position fixed
+        top 0
+        z-index 99
+        height .6rem
+        line-height .6rem
+        background #18191c
+        border-bottom 1px solid #000
+        left 0
+        right 0
+        text-align center
+        font-size .24rem
+
+        .tit
+            width 3rem
+            overflow hidden
+            margin 0 auto
+            white-space nowrap
+            text-overflow ellipsis
+
+        .close
+            line-height .6rem
+            font-size .3rem
+            padding 0 .1rem
+            cursor pointer
+            position fixed
+            left 0
+        .fr
+        .fl
+            position fixed
+            top 0
+        .fl
+            width .6rem
+            sup
+                top .1rem
+        .fr
+            right .2rem
+            line-height 1
+            width .5rem
+            height .6rem
+            cursor pointer
+            .avatar
+                top .1rem
+                width .4rem
+                height .4rem
+                border-radius 50%
+            sup
+                border-radius 2px
+                right -.1rem
+                top .1rem
+
+
+.chat
+    .logo
+        height .6rem
+        width 1.5rem
+        margin 0 .1rem
+        background url("../images/logo.svg") no-repeat left center/auto .36rem
+
+
+    @media  (min-width 768px)
+        .cont
+            &.img
+            &.file
+                cursor pointer
+                &:hover
+                    opacity .7
+
+    &.showRight
+        .right
+            transform translate3d(0,0,0)
+        @media  (min-width 768px)
+            .msg
+            .header
+            .fix_inp
+                right 2.5rem
+
+
+        @media  (max-width 768px)
+            .right_bg
+                position fixed
+                z-index 100
+                top 0.6rem
+                left 0
+                width 100%
+                bottom 0
+                background #333a
+
+
+    &.showLeft
+        .left
+            transform translate3d(0,0,0)
+        @media  (min-width 768px)
+            .msg
+            .header
+            .fix_inp
+                left 2.5rem
+
+
+        @media  (max-width 768px)
+            .left_bg
+                position fixed
+                z-index 100
+                top 0.6rem
+                left 0
+                width 100%
+                bottom 0
+                background #333a
+    .confirm
+        position fixed
+        z-index 999
+        right 0
+        top .1rem
+        background #000
+        width 3rem
+        border-radius 0 0 0 .06rem
+        transition .2s ease-out
+        &:not(.show)
+            opacity .5
+            transform translate3d(110%,0,0)
+        .cont
+            padding .1rem
+            font-size .14rem
+            a
+                margin 0 .05rem
+                color #77b1e6
+        .close
+            position absolute
+            margin 0 0 0 -.2rem
+            background #000
+            padding .05rem
+            font-size .14rem
+            color #999
+            cursor pointer
+            &:hover
+                opacity .7
+
+        .nav_tabs
+            width 100%
+            text-align center
+            line-height .36rem
+            font-size .14rem
+            border-width 1px 0 0 0
+            border-radius 0 0 .1rem .1rem
+            .cancel
+                color $jv
+            .sure
+                color $mlv
+
+    .f_info
+        padding .1rem
+        border-bottom 1px solid #0006
+        .pre
+            white-space pre-wrap
+            margin-bottom .1rem
+            font-size .12rem
+            min-height 1rem
+
+    .msg
+    .header
+    .fix_inp
+    .left
+    .right
+        transition .15s
+
+    .left
+    .right
+        position fixed
+        z-index 101
+        width 2rem
+        bottom 0
+        background #191c29f2
+        font-size .14rem
+        padding-top .6rem
+        overflow-y auto
+        .head
+            position absolute
+            width 100%
+            top 0
+            background #111
+            height .6rem
+            left 0
+            border-bottom 1px solid #000
+            i
+                position absolute
+                font-size .26rem
+                background #0001
+                top 0
+                right 0
+                padding .17rem
+
+    .left
+
+        width 2.5rem
+        transform translate3d(-110%,0,0)
+        left 0
+        top 0
+        border-right 1px solid  #000
+        .logo,i
+            cursor pointer
+            &:hover
+                opacity .9
+                color $mlv
+
+        h3
+            margin 0
+            padding-left .1rem
+            color $mlv
+            font-size .14rem
+            padding-top .1rem
+            *
+                font-weight normal
+                vertical-align middle
+                margin 0 .04rem 0 0
+            sub
+                color #39ada4
+
+        .add
+            color $mlv
+            position absolute
+            right .1rem
+            font-size .18rem
+            margin-top -.2rem
+
+        .user_li
+            padding-bottom .1rem
+            sup
+                //left .2rem
+                right 1.9rem
+                top .2rem
+            h4
+                font-size .14rem
+                margin 0
+                line-height .16rem
+                max-width 70%
+                white-space nowrap
+                overflow hidden
+                text-overflow ellipsis
+
+            p
+                font-size .1rem
+                color #aaa
+            .li
+                padding-left .4rem
+                height .36rem
+                .avatar
+                    width .35rem
+                    height .35rem
+                    border-radius 50%
+                sub
+                    position absolute
+                    top -.03rem
+                    right 0
+                    opacity .6
+
+    .right
+        transform translate3d(110%,0,0)
+        right 0
+        width 2.5rem
+        top 0
+        border-left 1px solid  #000
+        .head h4
+            font-size .18rem
+            font-weight normal
+            color #42aa55
+            margin 0
+            line-height .6rem
+            padding-left .1rem
+    .user_li
+        .sm
+            padding .1rem
+            font-size .12rem
+            i
+                font-size .16rem
+                margin 0 .04rem
+        .li
+            line-height .24rem
+            position relative
+            padding-left .3rem
+            margin .1rem
+            cursor pointer
+            .avatar
+                //border-radius 50%
+                width .24rem
+                height .24rem
+                top 0
+                left 0
+            i
+                font-size .18rem
+                position absolute
+                right 0
+                top .05rem
+                color #0000
+                &[type="1"]
+                    color #fff5
+                &[type="2"]
+                    color $jv
+
+        p
+            margin 0
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+
+    sup
+        position absolute
+        background $hon
+        font-size .1rem
+        top 0
+        right 0
+        line-height 1
+        padding .02rem .04rem
+        border 2px solid #111
+        border-radius .1rem
+
+    .fix_inp
+        position fixed
+        z-index 99
+        bottom 0
+        background #000
+        padding 4px .8rem 4px 4px
+        max-width 100%
+        left 0
+        right 0
+        font-size 0
+
+        .btn
+        textarea
+            height .4rem
+            margin 0
+            font-size .16rem
+        textarea
+            font-size .14rem
+            line-height .2rem
+            transition .1s
+            padding 0.06rem
+            &[type="1"]
+                height .5rem
+            &[type="2"]
+                height .7rem
+            &[type="3"]
+                height .9rem
+            &[type="4"]
+                height 1.1rem
+            &[type="5"]
+                height 1.2rem
+        li,.li
+            position relative
+            input
+                position absolute
+                width 100%
+                height 100%
+                background #f003
+                opacity .00001
+        @media  (min-width 768px)
+            .mob_bar
+                display none
+        .pc_bar
+            position absolute
+            right .1rem
+            top 0
+            line-height .55rem
+            font-size .24rem
+            .li
+                display inline-block
+                overflow hidden
+                margin-left .1rem
+
+        @media  (max-width 768px)
+            padding 4px .8rem 4px .4rem
+            .mob_bar
+                position absolute
+                left 0
+                top 0
+
+                i
+                    font-size .24rem
+                    line-height .5rem
+                    margin 0 .06rem
+                &.showMoBar ul
+                    transform translate3d(0,0,0)
+                ul
+                    transition .3s
+                    transform translate3d(-100%,0,0)
+                    position absolute
+                    bottom .5rem
+                    background #111
+                    border 1px solid #000
+                    margin 0
+                    padding .1rem 0
+                    width 1.3rem
+                    list-style none
+                    font-size .16rem
+                    *
+                        line-height .4rem
+                        vertical-align middle
+
+
+            //.inp::-webkit-input-placeholder
+            //    color #0000
+
+        .btn
+            position absolute
+            bottom 4px
+            right 4px
+            line-height .4rem
+            width .7rem
+            margin 0
+            padding 0
+            border-radius 2px
+
+    .avatar
+        width .5rem
+        height .5rem
+        box-shadow none
+        border 0
+        border-radius .02rem
+        position absolute
+        overflow hidden
+        left .1rem
+        margin 0
+        top .13rem
+        .img
+            border-radius .02rem
+    .msg
+        position fixed
+        overflow-y auto
+        top .6rem
+        bottom .5rem
+        left 0
+        right 0
+        padding .1rem 0
+
+        .list
+            padding .1rem .1rem .1rem .65rem
+            position relative
+            min-height .7rem
+            font-size 0
+            &.me
+                padding .1rem .65rem .1rem .1rem
+                text-align right
+                .avatar
+                    left auto
+                    right .1rem
+                .cont
+                    background-color $lv
+
+                &::after
+                    left auto
+                    right .66rem
+                    border-width: .12rem .12rem 0 0
+                    border-color: $lv transparent transparent transparent
+
+                .time b
+                    display none
+            &::after
+                content ''
+                position absolute
+                left .66rem
+                font-size 0
+                top .34rem
+                border-style: solid
+                border-width: 0 .12rem .12rem 0
+                border-color: transparent #0a446f transparent transparent
+
+            &[type="1"] .cont
+                font-size 0
+                padding 2px
+                height auto
+                width auto
+                background-image url("../images/img_load.svg")
+                background-position center
+                background-repeat no-repeat
+                background-size contain
+                min-width 1rem
+                min-height 1rem
+                position relative
+                overflow visible
+
+                b
+                p
+                    position absolute
+                    left 5%
+                    margin 0
+                    white-space nowrap
+                    width 90%
+                b
+                    top .05rem
+                    font-size .1rem
+                p
+                    padding-top .8rem
+                    bottom .06rem
+                    font-size .11rem
+                    text-align center
+
+
+                img
+                    position relative
+                    z-index 2
+                    min-width 1rem
+                    min-height 1rem
+                    opacity .01
+                    transition .2s
+                    &[src]
+                        opacity 1
+                        background #1c673d
+            &[type="5"]
+                .cont
+                    background #444
+                &::after
+                    border-color: transparent #444 transparent transparent
+                &.me::after
+                    border-color: #444 transparent transparent transparent
+                *
+                    vertical-align middle
+                p
+                    margin 0
+                    color #e0ba6f
+                    font-size .12rem
+                i
+                    font-size .2rem
+                    line-height 1
+                    //position absolute
+                    //margin -.1rem 0 0 -.25rem
+        .time
+            font-size .14rem
+            height .24rem
+            sub
+                font-size .12rem
+                margin -.02rem 0 0 .05rem
+                vertical-align middle
+                color #fff8
+        .cont
+            background #0a446f
+            padding .05rem .1rem
+            display inline-block
+            margin 0 .1rem
+            border-radius .04rem
+            white-space pre-wrap
+            text-align justify
+            word-break break-all
+            font-size .16rem
+            position relative
+            max-height 20rem
+            overflow hidden
+
+
+            img
+                border-radius 2px
+                position relative
+                z-index 9
+                max-width 2rem
+                max-height 2.5rem
+
+    .edit_bg
+        position fixed
+        z-index 103
+        top 0.6rem
+        left 0
+        width 100%
+        bottom 0
+        background #222a
+
+    .addGroup
+        position fixed
+        z-index 104
+        background #111
+        overflow hidden
+        .close
+            position absolute
+            right .1rem
+            top 0
+            line-height .6rem
+        .main
+            padding .1rem
+        .inp
+            font-size .16rem
+            margin-bottom .05rem
+        @media  (min-width 768px)
+            width 5.6rem
+            margin 1.3rem auto 0 -3rem
+            left 50%
+            border-radius 4px
+
+        @media  (max-width 768px)
+            width 100%
+            height 100%
+            left 0
+            top 0
+        h3
+            margin 0
+            background #0005
+            text-align center
+            font .18rem/.6rem normal
+    .groups
+        padding .1rem
+        bottom 0
+        .search
+            position relative
+            max-width 5rem
+            padding 0 1.3rem 0 0
+            .btn
+                position absolute
+                right 0
+                top 0
+                width 1.2rem
+            .inp
+                font-size .14rem
+                height .4rem
+        .groups_list
+            padding .1rem 0
+        @media  (max-width 768px)
+            .groups_list .li
+                margin .05rem 0
+                width 100%
+        .li
+            display inline-block
+            position relative
+            width 4.15rem
+            height 1.4rem
+            vertical-align middle
+            margin .05rem
+            background #fff1
+            text-align left
+            border-radius .05rem
+            padding .1rem .1rem .1rem 1.4rem
+            font-size .16rem
+            .fot
+                position absolute
+                bottom 0
+                opacity .4
+                right 0
+                font-size .12rem
+                padding .07rem .1rem
+            .cover_bg
+            .img
+                width 1.2rem
+                height 1.2rem
+                background-color #0006
+            .cover_bg
+                position absolute
+                background-color  #0002
+                left .1rem
+                top .1rem
+
+            .con
+                h3
+                    height .3rem
+                    line-height 1.2
+                    margin 0
+                    white-space nowrap
+                    overflow hidden
+                    text-overflow ellipsis
+                p
+                    font-size .8em
+                    opacity .6
+                    margin 0
+                    height .6rem
+                    text-align justify
+                    overflow hidden
+                    //white-space pre-wrap
+                    text-overflow ellipsis
+                    cursor pointer
+                    display: -webkit-box
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical
+
+            .wz
+                font-size .12rem
+                padding-top .15rem
+                color #a88e59
+            .btn
+                position absolute
+                bottom .1rem
+                right .1rem

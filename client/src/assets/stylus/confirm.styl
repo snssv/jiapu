@@ -1,0 +1,78 @@
+.dialog
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index 9999999
+
+    &-bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background #3339
+
+
+    &-box
+        width: 4rem
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate3d(-50%,-50%,0)
+        background #000509
+        border-radius: .1rem
+        line-height: 1.5
+        //overflow hidden
+
+    &-main
+        //background #ffffff04
+        padding: .4rem .2rem
+        text-align: left
+        font-size: .2rem
+        color:#999
+
+    &-button
+        overflow: hidden
+        border-top: 1px solid #fff2
+        font-size: .24rem
+        line-height: .6rem
+        text-align: center
+        display: flex
+
+
+    &-confirm
+        &-button
+        &-cancel
+            cursor pointer
+            &:hover
+                opacity .7
+        &-cancel
+            color: $jv
+            flex:1
+            border-right: 1px solid #fff2
+            margin-right: -1px
+
+
+        &-button
+            flex:1
+            color: $mlv
+
+
+
+    .dialog-show-enter-active, .dialog-fade-enter-active
+        transition: all .3s ease
+
+    .dialog-show-leave-active, .dialog-fade-leave-active
+        transition: all .3s ease
+
+    .dialog-show-enter, .dialog-show-leave-active
+        top: -35%
+
+    .dialog-fade-enter, .dialog-fade-leave-active
+        opacity: 0
+
+
+
+

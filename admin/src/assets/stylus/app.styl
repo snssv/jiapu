@@ -1,0 +1,256 @@
+/* 公共样式 */
+//@import './icon.styl';
+
+$c1 = #101a24
+$c2 = #202530
+$jv = #f7971d
+$lv = #05663b
+$mlv = #82c13a
+
+$link = #009bff
+
+$la = #053266
+$lv1 = #05663b
+$lv2 = #d47d0a
+$lv3 = #053266
+$lv4 = #900241
+
+body
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0 auto;
+    text-align left;
+    overflow:auto;
+    background #fff
+    font-size 14px
+    .Vue-Toastification__container
+        z-index 10009
+    .Vue-Toastification__toast
+        padding 10px
+        border-radius 5px
+        min-height .5rem
+        margin-bottom 1px
+    .Vue-Toastification__toast--warning
+        background-color $jv
+    .Vue-Toastification__progress-bar
+        height 1px
+        bottom 4px
+    .Vue-Toastification__toast-body
+        font-size 14px
+*
+    box-sizing border-box
+
+.disabled
+[disabled]
+    pointer-events: none !important
+    cursor: wait !important
+    opacity: 0.6
+.hover
+    cursor pointer
+    color #0a446f
+    &:hover
+        color #840d67
+.postLock
+    position fixed
+    z-index -1
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background #0004
+    &.show
+        z-index 999999999
+.img
+    width 80px
+    height 80px
+    background #eee no-repeat center/cover
+
+.data_null
+    height 400px
+    margin 100px auto
+    background url("../images/data_null.svg") no-repeat center/contain
+
+.signin
+    background #27446a
+    width 100vw
+    height 100vh
+    padding-top 20vh
+    position fixed
+    z-index 999
+    transition .3s .2s
+    top 0
+    opacity 0
+    transform translate3d(-100%,0,0)
+    &.show
+        transform translate3d(0,0,0)
+        opacity 1
+    .box
+        background #ffff
+        padding 20px
+        width 400px
+        max-width 90vw
+        margin auto
+        border-radius 10px
+    h1
+        font-size 1.8em
+        border-bottom 1px solid #0001
+        margin 0 0 1em 0
+        color #0266
+.home
+    padding-left 160px
+    transition .2s
+    &.mini
+        padding-left 40px
+        .left
+            padding-top 80px
+            width 40px
+            a
+                padding 10px
+                span
+                    display none
+            .head
+                display none
+        .main .foot
+            left 40px
+    .left
+        position fixed
+        width 160px
+        transition .2s
+        background #127dc2
+        font-size 16px
+        color #fff
+        left 0
+        top  0
+        height 100vh
+        border-right 5px solid #0002
+        box-shadow 5px 0 10px #0002
+        .mini_toggle
+            position absolute
+            right -15px
+            top 10px
+            background $la
+            cursor pointer
+            font-size 24px
+            &:hover
+                opacity .8
+            i
+                padding 6px
+        .head
+            background #0001
+            padding 10px
+            border-bottom 2px solid #0002
+        a
+            display block
+            text-decoration none
+            color inherit
+            padding 10px 15px
+            &.active
+                background #95ac00
+
+    ul
+        list-style none
+        margin 0
+        padding 0
+    li
+        border-bottom 1px solid #0001
+        i
+            margin-right 10px
+
+.main
+    .head
+        height 8vh
+        border-bottom 2px solid #82c13a
+        background #fff
+        padding 2vh 20px
+
+
+    .el-table
+        .cell
+            height 30px
+            .img
+                margin -10px
+
+        p
+            margin 0
+            color $la
+            i
+                margin-right 5px
+                color #009688
+                cursor pointer
+            span
+                color $link
+        pre
+            margin 0
+            white-space normal
+            overflow hidden
+            font-size 12px
+            line-height 1.2
+        .cell:hover pre
+            position absolute
+            z-index 3
+            top -1px
+            width 300px
+            background #eee
+            border 1px solid #ddd
+            padding 5px
+            white-space pre-wrap
+            max-height 300px
+        .el-table__row
+            &:last-child,
+            &:nth-last-child(2),
+            &:nth-last-child(3),
+            &:nth-last-child(4)
+                .cell:hover pre
+                    top auto
+                    color #333
+                    bottom -1px
+
+
+    .foot
+        position fixed
+        bottom 0
+        background #fff
+        right 0
+        left 160px
+        padding 10px
+        z-index 9
+        transition .2s
+        border-top 1px solid $mlv
+        .total
+            position fixed
+            right 10px
+            bottom 15px
+.document
+    padding 20px 200px 20px 20px
+    position relative
+
+    .files
+        position absolute
+        top 20px
+        right 20px
+        width 160px
+        li
+            line-height 30px
+            cursor pointer
+            &:hover
+                color #009688
+    textarea
+        width 100%
+        height 85vh
+        padding 10px
+        border 1px solid #ccc
+        resize none
+        border-radius 5px
+.setting
+    width 600px
+    margin 20px  auto
+    .el-button
+        position fixed
+        right 20px
+.file_tab
+    td:nth-child(3)
+        padding 0
+        .cell
+            margin 2px
+            height 70px

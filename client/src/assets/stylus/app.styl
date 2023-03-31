@@ -1,0 +1,2063 @@
+/* 公共样式 */
+@import './icon.styl';
+
+$c1 = #101a24
+$c2 = #202530
+$jv = #f7971d
+$lv = #05663b
+$mlv = #82c13a
+$la = #053266
+$lv1 = #05663b
+$lv2 = #d47d0a
+$lv3 = #053266
+$lv4 = #900241
+$hon = #900241
+
+@import './md'
+@import './chat'
+@import './author'
+@import './confirm'
+@import './tree'
+@import './ys_calendar'
+
+html
+    height 100%
+    font-size 100px
+    @media (max-width: 768px)
+        font-size 90px
+
+    @media (max-width: 412px)
+        font-size 85px
+
+@font-face {
+    font-family: 'FangSong';
+    src: url("../fonts/FangSong.ttf");
+}
+
+body
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0 auto;
+    text-align left;
+    background #232529
+    color #ddd
+    font-size .2rem
+    font-family "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+    overflow hidden
+    //overflow-x hidden
+    .Vue-Toastification__container
+        z-index 10009
+    .Vue-Toastification__toast
+        padding 10px
+        border-radius 5px
+        min-height .5rem
+        margin-bottom .1rem
+    .Vue-Toastification__toast--warning
+        background-color $jv
+    .Vue-Toastification__progress-bar
+        height 1px
+        bottom 4px
+    .Vue-Toastification__toast-body
+        font-size .14rem
+        font-weight bold
+    @media (max-width: 768px)
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-overflow-scrolling: touch;
+        //.router-view
+        ////.main
+        //*
+        //    user-select: none;
+        //    -webkit-user-select: none;
+            //-webkit-overflow-scrolling: auto;
+            //overflow hidden
+*
+    box-sizing border-box
+a
+    color #fff
+    text-decoration none
+    transition .2s
+    cursor pointer
+    &:hover
+        color $jv
+
+.cover_bg
+.img
+    background #0001 no-repeat center/cover
+    width 1rem
+    height 1rem
+    border-radius 3px
+    margin auto
+
+.disabled
+[disabled]
+    pointer-events: none !important
+    cursor: wait !important
+    opacity: 0.6
+
+.nav_tabs
+    display table
+    border-radius .05rem
+    overflow hidden
+    border 1px solid #fff2
+    line-height .3rem
+    .tab
+        display table-cell
+        cursor pointer
+        padding 0 .1rem
+        &:not(:last-child)
+            border-right 1px solid  #fff2
+        &.active
+            background $lv
+            color #fff
+        *
+            vertical-align middle
+            margin 0 .04rem
+.label
+    display inline-block
+    margin 0 .1rem .1rem 0
+    border-radius .03rem
+    padding .05rem .1rem
+    background #fff2
+    cursor pointer
+    transition .1s
+    &:hover
+    &.active
+        background $lv
+
+    &.xs
+        padding .04rem .08rem
+        font-size .13rem
+
+.inp
+    height .46rem
+    width 100%
+    background $c2
+    border 1px solid #111
+    padding 0 .1rem
+    outline none
+    font-size .16rem
+    color inherit
+    border-radius .04rem
+    -webkit-appearance none !important //-去掉ios内阴影
+    &:focus
+        border-color $la
+        box-shadow 0 0 .1rem $la
+
+textarea.inp
+    height 1.8rem
+    resize none
+    padding .1rem
+    font-size .14rem
+
+.btn_group .btn
+    display inline-block
+    &:not(:first-child)
+        margin-left .2rem
+.btn
+    text-align center
+    color #fff
+    font-style normal
+    cursor pointer
+    text-decoration none
+    padding 0 .2rem
+    border-radius .05rem
+    font-weight bold
+    margin auto
+    max-width 5.6rem
+    line-height .5rem
+    background $lv
+    white-space nowrap
+    overflow hidden
+    -webkit-tap-highlight-color rgba(0,0,0,.1)
+    &:hover
+        opacity .8
+    &.empty
+        background none
+        box-shadow inset 0 0 0 1px $lv
+        color $lv
+    &.jv
+        background $jv
+        &.empty
+            background none
+            box-shadow inset 0 0 0 1px $jv
+            color $jv
+    &.hon
+        background $hon
+        &.empty
+            background none
+            box-shadow inset 0 0 0 1px $hon
+            color $hon
+    &.lan
+        background #134d7c
+    &.hui
+        background #555
+        &.empty
+            background none
+            box-shadow inset 0 0 0 1px #555
+            color #555
+
+
+    i:first-child
+        margin-right .05rem
+
+    &.disabled
+        opacity .5
+    sub
+        max-width 3rem
+        overflow hidden
+        text-overflow ellipsis
+
+    *
+        vertical-align middle
+        line-height 1.2
+        display inline-block
+    &.xs
+        font-size .18rem
+        line-height .4rem
+    &.xxs
+        font-size .14rem
+        line-height .3rem
+        padding 0 .1rem
+        border-radius 3px
+    &.xxxs
+        font-size .12rem
+        line-height .24rem
+        padding 0 .1rem
+        border-radius 2px
+
+    &.fix
+        position fixed
+        z-index 999
+        left 0
+        border-radius 0
+        bottom 0
+        width 100%
+        max-width 100%
+.signin
+    background #1238
+    width 100vw
+    height 100vh
+    padding-top 20vh
+    position fixed
+    z-index 10008
+    transition .2s
+    top 0
+    opacity 0
+    transform translate3d(-100%,0,0)
+    &.show
+        transform translate3d(0,0,0)
+        opacity 1
+
+
+.signpwd
+    margin-top 1rem
+.mine
+    .form_box
+        margin .1rem
+        border 1px  solid #fff1
+        border-radius .06rem
+        h1
+            font-size .2rem
+            line-height .5rem
+            margin .05rem .2rem
+        .btn
+            margin 0
+            width 100%
+        .form
+            padding .1rem  .2rem
+            .item
+                p
+                    margin 0 0 .1rem 0
+                    font-size .16rem
+                    line-height 2
+                .inp
+                    padding-left .4rem
+        @media (min-width 768px)
+            display inline-table
+            width 4.8rem
+
+
+.form_box
+    .box
+        background $c1
+        padding 20px
+        width 4rem
+        margin auto
+        //transform translate3d(-50%,-50%,0)
+        border-radius 10px
+        border 1px solid #fff2
+        position relative
+        h1
+            font-size .3rem
+            text-align center
+            border-bottom 1px solid #fff2
+            margin 0 0 1em 0
+            color #fff5
+        p
+            font-size .14rem
+            margin .1rem 0
+        .inp
+            padding-left .5rem
+        a
+            font-size .16rem
+    .logo
+        margin .2rem auto
+        height .6rem
+        background url("../images/logo.svg") no-repeat center/contain
+    .close
+        position absolute
+        right .2rem
+    .item
+        padding .1rem 0
+        position relative
+        i
+            position absolute
+            font-size .24rem
+            top .22rem
+            left .1rem
+            opacity .6
+    .fr
+        float right
+    .li
+        padding .05rem 0
+        &:last-child
+            padding-top .2rem
+.signup
+    .box
+        margin .1rem auto
+    .terms
+        height 90vh
+        padding-right .1rem
+        overflow-y auto
+    .form
+        b
+            color $lv
+
+@media (min-width 768px)
+    .signup
+        padding .2rem 4.4rem 0 .1rem
+        position relative
+        max-width 14rem
+        margin 0 auto
+        .box
+            position absolute
+            right .1rem
+
+
+@media (max-width 768px)
+    .signpwd
+    .signup
+        overflow-y auto
+        padding .2rem .2rem 1rem .2rem
+        height 99vh
+        .box
+            width 100%
+            margin 0
+            h1
+                display none
+        .terms
+            margin .2rem 0
+            height auto
+            overflow visible
+
+
+.data_null
+    height 4rem
+    margin 1rem auto
+    background url("../images/data_null.svg") no-repeat center/contain
+header
+    position fixed
+    z-index 10007
+    height .6rem
+    line-height .4rem
+    background #18191c
+    border-bottom 1px solid #000
+    width 100%
+    overflow hidden
+    .logo
+    .menu
+        display inline-block
+        vertical-align middle
+    .logo
+        width 1.4rem
+        height .6rem
+        background url("../images/logo.svg") no-repeat center/contain
+        margin 0 .1rem
+        &.back
+            background-image url("../images/logo_s.svg")
+            width .4rem
+
+    .close
+    .back
+        line-height .6rem
+        font-size .3rem
+        padding 0 .1rem
+        cursor pointer
+    .close
+        position absolute
+        right .1rem
+
+    a
+        padding .02rem .2rem
+        &.active
+            color $mlv
+
+    .menu
+        margin 0 .3rem 0 0
+    .inp
+        background transparent
+        border 0
+
+    .right
+        position absolute
+        top .1rem
+        right .1rem
+        font-size .14rem
+        i
+            margin-right .05rem
+
+.search_bg
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index 10007
+    &:not(.show)
+        display none
+
+#app:not(.ishome)
+    .search_box
+        display none
+
+.search_box
+    position fixed
+    top .06rem
+    width 4rem
+    z-index 10008
+    .search
+        display table
+        background #333
+        border 1px solid #000
+        border-radius .05rem
+        overflow hidden
+        width 100%
+        span
+            display table-cell
+            vertical-align middle
+        .btnx
+            background #c84
+            text-align center
+            font-size .25rem
+            line-height 1
+            width .5rem
+    .toggle_ico
+        position absolute
+        right .1rem
+        font-size .24rem
+    @media (min-width 768px)
+        left 4.2rem
+        .toggle_ico
+            display none
+    @media (max-width 768px)
+        width 100%
+        padding .1rem
+        .search:not(.show)
+            display none
+
+    .hot_key
+
+        .con
+            background #000
+            top .53rem
+            padding .1rem
+            border-radius 0 0 .08rem .08rem
+            transition .2s
+        &:not(.show) .con
+            padding 0 .1rem
+            opacity 0
+            height 1px
+            overflow hidden
+        .label
+            font-size .14rem
+
+            sup
+                font-weight 200
+                color $jv
+                margin-left .05rem
+
+
+.tips
+    font-size .13rem
+    h3
+        color $mlv
+    li
+        margin .08rem 0
+        b
+            display inline-block
+            color $mlv
+            cursor pointer
+            &:hover
+                opacity .8
+
+
+
+.navbar
+    height .4rem
+    line-height .4rem
+    font-size .14rem
+    text-align left
+    padding 0 .1rem
+    background #101010ee
+    position relative
+    z-index 9
+    white-space nowrap
+    .icon-filter
+        position absolute
+        right 0
+        padding .1rem
+        top 0
+        background #000
+        font-size .2rem
+    *
+        vertical-align middle
+        display inline-block
+    strong,b,em
+        white-space nowrap
+        font-weight normal
+        font-style normal
+        margin 0 .02rem
+        max-width 1.2rem
+        overflow hidden
+        text-overflow ellipsis
+        color #a5c18d
+    b
+        max-width 1rem
+
+    @media (min-width 768px)
+        strong,b,em
+            cursor pointer
+            max-width 4rem
+
+.avatar
+    background url("../images/avatar.jpg") no-repeat center/cover
+    border-radius 50%
+    border 3px solid #000
+    box-shadow 0 0 0 10px #333
+    position relative
+    .img
+        position absolute
+        width 100%
+        height 100%
+        border-radius 50%
+        margin 0
+
+.nav_menu
+    position fixed
+    z-index 999999
+    width 100%
+    height 100%
+    background #0001
+    top 0
+    right 0
+    transition .2s
+    overflow hidden
+    text-align right
+    padding-top .6rem
+    &:not(.show)
+        opacity 0
+        width 1px
+    ul
+        width auto
+        display inline-table
+        padding 0
+        margin 0
+        list-style none
+        background #111
+        li
+            padding .1rem
+            border-bottom 1px solid #000
+        *
+            vertical-align middle
+        i
+            margin 0 .1rem
+.main
+    padding .6rem 0 0 0
+.mine
+    position relative
+    .head_info
+        text-align center
+    .avatar
+        margin .4rem auto
+        width 2rem
+        height 2rem
+    &.help
+    &.setting
+        overflow-y auto
+        height 100vh
+    &.help
+        .nav_tabs
+            max-width 100%
+        .wrap
+            max-width 9rem
+            padding 1rem .1rem 1.5rem .1rem
+            &::before
+                display none
+            pre,code
+                max-width 100%
+    &.setting
+        .wrap
+            padding .1rem .1rem 1.5rem .1rem
+
+    .nav_tabs
+        width 3rem
+        line-height .4rem
+        font-size .16rem
+        text-align center
+        max-width 10.4rem
+    .wrap.wrap_topad
+        padding-top .5rem
+        .nav_tabs
+            margin -.5rem 0 0 -.1rem
+    .name
+        text-align center
+        h3,h4
+            margin .08rem
+        h3
+            font-size .3rem
+        h4
+            font-weight 300
+            font-size .14rem
+        dl
+            margin 0
+        dt,dd
+            display inline-block
+            font-size .16rem
+        dd
+            margin-left .2rem
+    .btn
+        width 2rem
+        margin .2rem .1rem
+        display inline-block
+    .box
+        margin .4rem auto
+        border-radius .1rem
+        border 1px solid #fff2
+        padding .2rem
+    .menu
+        a
+            display block
+            padding .15rem .3rem
+        ul
+            list-style none
+            margin 0
+            padding 0
+            border-top 1px solid #fff1
+            background #0005
+        li
+            border-bottom 1px solid #fff1
+
+        i:first-child
+            margin-right .1rem
+    sub
+        margin-left .05rem
+        vertical-align text-bottom
+    .nav_tabs
+        position fixed
+        width 10rem
+        border-radius 0
+        border-width 0 0 1px 0
+        z-index 20
+        background #242529
+        .active
+            background #222
+            color $mlv
+            border-bottom 2px solid $mlv
+    .comment_list
+        .li
+            font-size .14rem
+            padding .1rem
+            border-bottom 1px solid #fff1
+            width 100%
+            display table
+        .fl,.fr
+            display table-cell
+            vertical-align middle
+        .fr
+            width 1.5rem
+            text-align right
+        .tm
+            opacity .6
+            margin-bottom .05rem
+            span
+                font-size .12rem
+                margin 0 .3rem 0 .05rem
+        .pre
+            white-space pre-wrap
+        .btn
+            font-size .12rem
+            opacity .7
+            width .8rem
+            margin 0
+            padding 0
+            line-height .3rem
+            display inline-block
+
+.message_list
+    font-size .14rem
+    .li
+        padding .1rem
+        border-bottom 1px solid #fff1
+        h3
+            font-size .16rem
+            margin 0
+        p
+            margin .1rem 0 0
+            font-size .12rem
+            opacity .7
+        a
+            margin 0 .05rem
+            color $mlv
+
+.file_list
+    .li
+        display inline-block
+        font-size .12rem
+        margin .1rem
+        text-align center
+        overflow hidden
+        &:hover
+            .img .btn_group
+                transform translate3d(0,0,0)
+    .img
+        width 1.8rem
+        height 1.8rem
+        .btn_group
+            padding .1rem 0
+            background #000a
+            transition .2s
+            transform translate3d(0,-100%,0)
+        .btn
+            width 40%
+            margin 0 .05rem
+
+    h3,p
+        margin .05rem 0
+        max-width 1.8rem
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+    @media (max-width 768px)
+        .mescroll
+            padding 2vw 0
+        .li
+            margin 1vw
+        h3
+            width 30vw
+        .img
+            width 30vw
+            height 30vw
+
+.wrap_acrticle
+    padding .5rem .1rem
+
+
+.people_det
+    &.editor .people_top
+        margin .2rem 0 .5rem 0
+    .people_top
+        margin .5rem 0 .2rem 0
+        position relative
+        padding-left 2.3rem
+        min-height 2.8rem
+        .btn
+            position absolute
+            right 0
+            width .7rem
+        .avatar
+            width 2rem
+            height 2.2rem
+            background #0002 no-repeat center/cover
+            border 6px solid #000
+            border-radius 8px
+            margin-top .1rem
+            position absolute
+            left 0
+            box-shadow none
+        .li
+            margin .05rem 0
+            font-size .16rem
+            b
+                font-weight normal
+            i
+                display inline-block
+                width .4rem
+        .name
+            b
+                font-size .4rem
+            sub
+                font-size .16rem
+                position absolute
+                margin .25rem 0 0 .2rem
+        .catalog
+            margin-top .15rem
+            .head
+                height .36rem
+                border-bottom 1px dashed #0005
+            .box
+                display inline-block
+                margin .2rem .2rem 0 0
+                padding .1rem
+                border 1px solid #0003
+                background #0001
+                border-radius 4px
+                cursor pointer
+                &:hover
+                    opacity .8
+                .addre
+                    font-size .12rem
+                    width 1.9rem
+                    white-space nowrap
+                    overflow hidden
+                    text-overflow ellipsis
+
+        @media (max-width :768px)
+            padding 0
+            .avatar
+                position relative
+                margin 0 auto .3rem auto
+            .catalog .box .addre
+                width 37.5vw
+
+@media (min-width :768px)
+    .people_det
+        .left .wrap
+            max-width 9rem
+            margin 0 auto
+
+
+    .mine
+        .wrap
+            //position absolute
+            max-width 12rem
+            margin 0 auto
+            position relative
+            padding .4rem 1.8rem .5rem 0
+            min-height 75vh
+            &::before
+                content ''
+                position absolute
+                right 1.5rem
+                top 0
+                bottom 0
+                border-right 1px dashed #111
+        //max-width 12rem
+        //margin .2rem auto 0 auto
+        //position relative
+        //padding-right 1.6rem
+        //height 90vh
+        .menu
+            position absolute
+            top .7rem
+            z-index 2
+            left 50%
+            margin-left 4.6rem
+            font-size .14rem
+            a
+                padding .1rem .15rem
+        .active
+            color $mlv
+        .icon-angle-right
+            display none
+        .nav_tabs
+            padding-left .1rem
+            text-align left
+            width 100%
+            .tab
+                width 1.5rem
+                text-align center
+                display inline-block
+
+@media (max-width :768px)
+
+    .mine
+        .menu:not(.root)
+            display none
+        .menu.root
+            .icon-angle-right
+                float right
+        .head_info
+            width 1.6rem
+            height 1.6rem
+        .nav_tabs
+            width 100%
+            .active
+                background #222
+                color $mlv
+                border-bottom 2px solid $mlv
+        .wrap
+            padding .1rem
+        .file_list
+            padding .1rem .05rem
+        .wrap_mine
+            position fixed
+            top .6rem
+            bottom .5rem
+            left 0
+            right 0
+            overflow-y auto
+        .menu
+            margin .1rem -.1rem
+        .avatar
+            width 1.2rem
+            height 1.2rem
+            border-width 1px
+        .name
+            position absolute
+            top .4rem
+            left 1.8rem
+            text-align left
+            h3
+                margin 0
+            h4
+                margin .1rem 0
+
+            .btn
+                margin .15rem 0
+                display block
+        .btn
+            width 1.4rem
+            line-height .44rem
+        .box
+            margin .3rem .1rem
+
+.icon-help
+    font-size .4rem
+    position fixed
+    z-index 999
+    bottom 1rem
+    right .1rem
+    transition .2s
+    opacity .3
+    cursor pointer
+    &:hover
+        opacity 1
+
+.first_tip
+    margin .2rem auto
+    border-radius .06rem
+    padding .3rem .1rem .2rem 1.2rem
+    background #092f6d
+    max-width 10rem
+    font-size .14rem
+    position relative
+    text-align left
+    h1
+        font-size .18rem
+        font-weight 800
+    .close
+        font-size .22rem
+        position absolute
+        right .1rem
+        top .1rem
+    p
+        margin .05rem 0
+    .ft
+        text-align right
+        opacity .6
+        cursor pointer
+        &:hover
+            opacity 1
+    .logo
+        width 1.2rem
+        position absolute
+        left 0
+        height .6rem
+        background url("../images/logo.svg") no-repeat center/contain
+    @media (min-width 768px)
+        padding .3rem .2rem .2rem 3.2rem
+        h1
+            font-size .3rem
+            line-height 1
+        p
+            font-size .2rem
+        .logo
+            left .5rem
+            width 2.4rem
+            height 1.2rem
+
+
+
+.upwarp-nodata
+    margin-bottom .6rem
+.article_list
+    display inline-block
+    width 4.6rem
+    height 1.4rem
+    vertical-align middle
+    margin .05rem
+    background #fff1
+    text-align left
+    border-radius .05rem
+    position relative
+    padding .1rem .1rem .1rem 1.4rem
+    font-size .16rem
+
+    .fot
+        position absolute
+        bottom 0
+        opacity .4
+        right 0
+        font-size .12rem
+        padding .07rem .1rem
+    .cover_bg
+    .img
+        width 1.2rem
+        height 1.2rem
+        background-color #0006
+    .cover_bg
+        position absolute
+        background-color  #0002
+        left .1rem
+        top .1rem
+    .tit
+        height .25rem
+        border-bottom 1px solid #fff1
+        margin-bottom .05rem
+        *
+            vertical-align middle
+
+        span
+            margin 0 .3rem 0 .05rem
+            font-size .8em
+    .con
+        font-size .8em
+        opacity .9
+        height .7rem
+        overflow hidden
+        *
+            white-space nowrap
+            text-align left
+        b
+            //color $jv
+            line-height .36rem
+            font-size .2rem
+        sub
+            color #3dda94
+            position absolute
+            margin 14px 0 0 10px
+        span
+            display block
+        .seniority
+            i
+                font-style normal
+                &:nth-child(2)
+                    margin-left .2rem
+
+    .wz
+        font-size .12rem
+        padding-top .05rem
+        color #a88e59
+    .top_r
+        position absolute
+        right .1rem
+        top .1rem
+        font-size .2rem
+        transition .2s
+        opacity .1
+        i
+            margin-left .15rem
+            cursor pointer
+            &:hover
+                color $jv
+
+    &:hover .top_r
+        opacity .6
+
+    @media (max-width: 768px)
+        width 100%
+        margin .05rem 0
+        border-radius 0
+        .tit span
+            margin-right .2rem
+        .con
+            b
+                line-height .38rem
+
+        .top_r i
+            margin-left .25rem
+
+.home
+    position absolute
+    top .6rem
+    left 0
+    right 0
+    bottom 0
+    overflow-y auto
+    .wrap
+        max-width 9rem
+        margin auto
+        padding .2rem
+    .poetry
+        text-align center
+        padding .5rem 0 1rem 0
+        font-size .4rem
+        font-family FangSong
+        line-height 1.5
+        .li
+            margin .2rem
+    p
+        text-indent 2em
+        line-height 1.8
+
+footer
+    position fixed
+    z-index 10007
+    bottom 0
+    width 100%
+    background #18191c
+    border-top 1px solid #000
+    transition .3s
+    font-size .16rem
+    &.hide
+        transform translate3d(0,100%,0)
+    @media (min-width: 768px)
+        display none
+    ul
+        list-style none
+        margin 0
+        display table
+        width 100%
+        padding 0
+        text-align center
+        height .5rem
+        *
+            vertical-align middle
+        li
+            width 20%
+            display table-cell
+        i
+            font-size .22rem
+
+        span
+            display block
+            font-size .1rem
+            margin-top .04rem
+    .active
+        color $mlv
+
+.mescroll
+    left 0
+    top .6rem
+    height auto !important
+    bottom 0
+    //left 0
+    //right 0
+    //bottom 0
+    //overflow-y auto
+    //-webkit-overflow-scrolling touch
+
+.feeling_bar
+    display inline-table
+    position absolute
+    z-index 9999
+    right .1rem
+    height .5rem
+    *
+        vertical-align middle
+    i
+        margin-right .1em
+    .list
+        display inline-block
+        cursor pointer
+        min-width .8rem
+        white-space nowrap
+        &:hover
+            opacity .8
+    .active
+        color $jv
+
+
+
+.filter
+    position fixed
+    z-index 10008
+    right 0
+    top .6rem
+    background #010408
+    padding .1rem
+    width 4.4rem
+    max-width 100%
+    transition .3s ease-in-out
+    &:not(.show)
+        opacity 0
+        transform translate3d(100%,0,0)
+    .close
+        position absolute
+        right .1rem
+        top .2rem
+        opacity .6
+    .check
+        margin .2rem 0
+
+    .head
+        padding .1rem
+        border-bottom 1px solid #fff2
+    .tab
+        white-space nowrap
+        text-align center
+        //max-width .6rem
+        min-width .58rem
+        overflow hidden
+        padding .05rem .06rem
+    .sort
+        position relative
+        .val
+            line-height .38rem
+            font-size .16rem
+            padding 0 .1rem
+            display inline-block
+            border 1px  solid #fff1
+            width 2.3rem
+        .nav_tabs
+            position absolute
+            right 0
+            top 0
+            height .4rem
+            font-size .24rem
+            .tab
+                padding 0
+
+
+        ul
+            width 2.3rem
+            list-style none
+            border 1px  solid #fff1
+            background #fff1
+            margin 0
+            padding 0
+            transition .2s
+            &:not(.show)
+                height 1px
+                opacity 0
+                overflow hidden
+            li
+                border-top 1px  solid #fff1
+                padding .1rem
+
+.amap
+    position fixed
+    z-index 10008
+    background #0008
+    top 0
+    left 0
+    width 100%
+    height 100%
+    .search-box
+        position absolute
+        color #666
+        max-width 100%
+        font-size .16rem
+    .head
+        background $c1
+        height .6rem
+        line-height .6rem
+        width 100%
+        display table
+        > *
+            display table-cell
+            vertical-align middle
+        .fl
+            width .3rem
+            padding 0 .1rem
+            white-space nowrap
+        .tit
+            text-align left
+            overflow hidden
+            white-space nowrap
+            text-overflow ellipsis
+            max-width 3rem
+            @media (max-width 768px)
+                max-width 1.8rem
+        .fr
+            width 1.3rem
+            .btn
+                display inline-block
+                margin .2rem 0 0 .2rem
+
+    .maps
+        height 100%
+        width 100%
+        position absolute
+        background #eae2d0
+
+    @media (min-width: 768px)
+        .cont
+            width 10rem
+            margin 1rem auto
+        .maps
+            width 10rem
+            height 60vh
+
+
+.loading
+    position fixed
+    left 0
+    top 0
+    z-index 99999
+    background #123e url("../images/loading.svg") no-repeat center/.3rem
+    width 100%
+    height 100%
+    transition opacity .3s .1s
+    &:not(.active)
+        z-index 0
+        opacity 0
+        transform translate3d(0,-200%,0)
+.loading2
+    background url("../images/loading.svg") no-repeat center/.3rem
+    height 20vh
+
+.editor
+    text-align justify
+    overflow-x hidden
+    font-size .16rem
+    .history
+        position fixed
+        z-index 10005
+        right .2rem
+        top .6rem
+        i
+            font-size .23rem
+            line-height .4rem
+
+    img
+        max-width 100%
+        display table
+        margin auto
+    .private_set
+        margin .4rem 0
+        font-size .14rem
+        &:not(.open) .inp
+            display none
+        b
+            cursor pointer
+            &:hover
+                opacity .7
+        &.checkbox
+            position relative
+            padding-left .3rem
+            background url("../images/checkbox.svg") no-repeat left center/.2rem
+            &.true
+                background-image url("../images/checkbox_true.svg")
+
+.his_item
+    position fixed
+    z-index 10009
+    top .6rem
+    right 0
+    border-radius .1rem 0 0 .1rem
+    padding .1rem
+    background #000
+    transition .3s ease-in
+    min-width 1.2rem
+    &:not(.show)
+        transform translate3d(100%,0,0)
+    .close
+        position absolute
+        padding .1rem 0
+    h4
+        text-align right
+        margin 0
+        height .4rem
+    .li
+        padding .08rem 0 .08rem .15rem
+        border-top 1px solid #fff3
+        cursor pointer
+        font-size .14rem
+        &:hover
+            color $mlv
+        &.active
+            color $jv
+        b
+            position absolute
+            margin-left -.15rem
+        p
+            max-width 2rem
+            max-height .28rem
+            font-size .12rem
+            line-height 1.2
+            overflow hidden
+            margin 0
+.step2
+    position fixed
+    background $c1
+    z-index 10007
+    top .6rem
+    left 0
+    right 0
+    bottom 0
+    overflow-y auto
+    .tab
+        width .8rem
+        text-align center
+    .right
+        padding .1rem
+        textarea.inp
+            height 1.5rem
+            transition .1s ease-in
+            &:focus
+                height 60vh
+
+    .top_bar
+        position relative
+        height .4rem
+        > *
+            display inline-block
+            vertical-align middle
+        b
+            margin-right .1rem
+        .fr
+            position absolute
+            right 0
+            top  .1rem
+            .li
+                display inline-block
+                margin-left .15rem
+                cursor pointer
+                span
+                    font-size .12rem
+                *
+                    vertical-align middle
+    .btn_group
+        padding .4rem 0
+        text-align center
+        .btn
+            width 40%
+            font-size .22rem
+
+.address
+    width 100%
+    height .5rem
+    margin .1rem 0
+    display table
+    background #123
+    border 1px solid #000
+    border-radius .05rem
+    overflow hidden
+    position relative
+    .fl,.fr,.fi
+        display table-cell
+        vertical-align middle
+    .fl
+        padding-left .3rem
+        font-size .14rem
+        p
+            white-space nowrap
+            overflow hidden
+            text-align left
+            padding 0 .1rem
+            text-overflow ellipsis
+            width 2.5rem
+        &::before
+            content '籍贯'
+            position absolute
+            left .1rem
+            top .14rem
+            color #00c71f
+    .fr
+        width .8rem
+        text-align left
+        padding 0 .05rem
+        border-left 1px solid #000
+        div
+            width .6rem
+            font-size .1rem
+            padding .02rem
+            white-space nowrap
+            overflow hidden
+            color #fff7
+    .fi,.fr
+        cursor pointer
+        &:hover
+            opacity .8
+    .fi
+        background $lv
+        width .4rem
+        text-align center
+        font-size .3rem
+    .inp
+        border 0
+        background transparent
+        font-size .14rem
+
+.address_sub
+    font-size .1rem
+    padding .05rem 0 .15rem 0
+    b
+        color $lv
+
+.select
+    text-align left
+    font-size .14rem
+    dl
+        display table
+        width 100%
+        padding .1rem 0
+        border-top 1px dashed #fff2
+        margin 0
+        dt,dd
+            display table-cell
+            position relative
+        dt
+            width .5rem
+            &:nth-child(3)
+                padding-left .2rem
+                width .6rem
+    .inp
+        font-size inherit
+        height .36rem
+.clans_set
+    position absolute
+    z-index 999
+    right 6px
+    width 481px
+    border 1px solid #000
+    border-width 1px 0 0 1px
+    background #0b1a35f5
+    text-align center
+    overflow hidden
+    transition .3s
+    font-size .12rem
+    &.hide
+        max-height 1px
+        opacity 0
+
+    b
+        padding 5px 0
+        display inline-block
+        width 80px
+        border 1px solid #000
+        border-width 0 1px 1px 0
+        &:hover
+            background #2b8f2a
+            cursor alias
+
+    @media (max-width:600px)
+        width 100%
+        right 0
+        border-width 1px 0 0 0
+        b
+            width 25%
+            padding 7px 0
+
+.upimgs
+    .img
+        width .95rem
+        height .95rem
+        margin .1rem .1rem 0 0
+        transition .2s
+        position relative
+        text-align center
+        display inline-block
+        vertical-align middle
+        overflow hidden
+        &:hover dl
+            opacity 1
+        dl
+            display table
+            position absolute
+            bottom 0
+            left 0
+            width 100%
+            margin 0
+            font-size .12rem
+            line-height .2rem
+            opacity .7
+            cursor pointer
+            dt, dd
+                display table-cell
+            dt
+                background #150c
+            dd
+                background #000b
+                color #c00
+.upimg
+    .icon-camera
+        line-height .8rem
+        font-size .3rem
+        color #fff8
+        &:hover
+            color #ffff
+    input
+        position absolute
+        opacity .0001
+        left 0
+        top 0
+        width 100%
+        height 100%
+
+
+.mdview_tit
+    margin .2rem 0 0 0
+    border-bottom 1px solid #0004
+    height .3rem
+    font-size .18rem
+    color #cdff88
+.page_det
+    .private
+        display table
+        margin 20vh auto
+        .inp
+            width 3rem
+            margin-bottom .2rem
+    .tit_tag
+        margin .2rem
+        display table
+        border-bottom 3px solid #1188d666
+        color #1188d6
+    .left
+    .right
+    .frame
+        position absolute
+        top .6rem
+        overflow-y auto
+        bottom 0
+    .left
+        left 0
+        right 6rem
+
+
+
+    .frame
+        width auto
+        right 5px
+        top .3rem
+        left 0
+        overflow-y visible
+        background #fffe
+        .tip_bar
+            position absolute
+            z-index 2
+            width 100%
+            line-height .3rem
+            margin-top -.3rem
+            font-size .14rem
+            text-align center
+            b,i
+                margin 0 .05rem
+                color $jv
+                cursor pointer
+            i
+                font-size .1rem
+                font-style normal
+
+
+    .pass
+        width 4rem
+        margin 2rem auto
+        .btn
+            margin-top .1rem
+    .right
+        width 6rem
+        padding .1rem .1rem 2rem .1rem
+        right 0
+        .tags
+            font-size .14rem
+
+    .contact
+        background #111
+        text-align center
+        padding .3rem .1rem
+        margin-left -.1rem
+        margin-right -.1rem
+        .tip
+            font-size .12rem
+            margin-bottom .2rem
+    .top_tit
+        position relative
+        padding-top .1rem
+        font-size .8em
+        height .5rem
+        display table
+        width 100%
+        @media (max-width 800px)
+            border-top 1px solid #fff4
+            margin-top .1rem
+        .fr
+            text-align right
+            font-size .28rem
+            .ts
+                font-size .14rem
+                margin-right 0
+        .fr
+        .fl
+            display table-cell
+        .fl
+            padding-left .3rem
+            &.av
+                padding-left .5rem
+            i,.avatar
+                position absolute
+                left 0
+                top .02rem
+            i
+                font-size .26rem
+                top .15rem
+        i
+            margin-right .05rem
+        *
+            vertical-align middle
+        .tm
+            font-size .12rem
+            color #fffa
+    .titxl
+        position relative
+        opacity .8
+        font-size .24rem
+        height .5rem
+        line-height .45rem
+        background #0005
+        margin 0 -.1rem
+        padding 0 .1rem
+        .feeling_bar
+            display inline-block
+            position relative
+            right auto
+            left auto
+            padding 0
+            margin-top -2px
+        .list
+            display inline-block
+            min-width .8rem
+            margin-right .2rem
+            span
+                font-size .18rem
+        i
+            margin-right .05rem
+        *
+            vertical-align middle
+    .av
+        position relative
+        padding-left .5rem
+        cursor pointer
+    .avatar
+        box-shadow none
+        width .4rem
+        height .4rem
+        position absolute
+        left 0
+        top -.1rem
+        border 0
+
+
+    iframe
+        width 100%
+        height 4rem
+        border 0
+        margin .2rem  auto
+        max-width 100% !important
+        &.if_pe
+            margin 0
+            height 100%
+    .mdview
+        overflow-y auto
+
+    .comment_list
+        padding .2rem 0 .5rem 0
+        .li
+            font-size .16rem
+            padding .2rem 0 .3rem .5rem
+            border-top 1px solid #fff1
+            .feeling_bar
+                height .4rem
+                right .2rem
+            .fr
+                right 0
+                position absolute
+                white-space nowrap
+        .avatar
+            left -.5rem
+            top 0rem
+
+        .tit
+            position relative
+            height .3rem
+            border-bottom 1px dashed #fff2
+            margin-bottom .1rem
+            .tm
+                opacity .5
+                font-size .8em
+                margin-left .1rem
+            .fl
+                float left
+            .fr
+                float right
+            i
+                font-size 1.4em
+                &:not(:first-child)
+                    margin-left .2rem
+            .icon-trash
+                font-size .18rem
+                &.disabled
+                    opacity .3
+        p
+            margin .02rem 0
+        .pre
+            white-space pre-wrap
+            font-size .14rem
+        .child
+            background #fff1
+            border-left 3px solid #000
+            margin .1rem 0
+            padding .1rem
+
+.comment_form
+    height 1.5rem
+    position fixed
+    z-index 10007
+    bottom 0
+    background #000
+    padding 4px
+    width 6rem
+    max-width 100%
+    right 0
+    &.mob_min
+        height .6rem
+        textarea
+            height .5rem
+        input.inp,.btn
+            display none
+    .reply
+        position absolute
+        font-size .12rem
+        padding .04rem .4rem .04rem .1rem
+        color #fff6
+        border 1px solid #000
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        border-radius .05rem .05rem 0 0
+        left 3px
+        right 3px
+        background #212530
+        i
+            position absolute
+            right .1rem
+    textarea
+        height 1rem
+    .pad
+        padding-top .3rem
+    input.inp
+    .btn
+        position absolute
+        bottom 4px
+        line-height .34rem
+        height .34rem
+        font-size .14rem
+    input.inp
+        left 4px
+        width 68%
+    .btn
+        right 4px
+        line-height .34rem
+        width 30%
+
+
+.edit_tit
+    height .55rem
+    position relative
+    .btn_group
+        position absolute
+        right 0
+        top 0
+
+.page_nav
+    padding .1rem
+    margin .1rem
+    text-align center
+    color #fff6
+    label
+        padding .05rem .1rem
+        border 1px solid #fff1
+        border-radius 3px
+        font-size .14rem
+        cursor pointer
+        margin 0 .05rem
+
+
+
+
+@media (min-width: 768px)
+    header
+        .close
+        .back
+        .tit
+            display none
+    .step2
+        .left,.right
+            position absolute
+            top 0
+            height 100%
+            overflow-y auto
+        .left
+            left 0
+            right 6rem
+
+        .right
+            right 0
+            width 6rem
+            border-left 5px solid #000
+    .page_det
+        .right
+            border-left 5px solid #000
+        .show_mob
+            display none
+    .hide_pc
+        display none !important
+
+@media (max-width: 768px)
+    .hide_mob
+        display none !important
+    header
+        .logo
+            width 100%
+            height .4rem
+            margin .1rem
+        .tit
+            position fixed
+            top 0
+            font-size .24rem
+            line-height .6rem
+            left .6rem
+            right .6rem
+            text-align center
+            overflow hidden
+        .icon-menu
+            position absolute
+            right .1rem
+            top .15rem
+            font-size .3rem
+
+    .editor
+        .textarea
+            width 100% !important
+            transition .3s
+
+    .step2
+        .left
+            display none
+        &.review
+            .left
+                display block
+            .right
+                display none
+    .page_det
+        overflow-y auto
+        position fixed
+        top .6rem
+        left 0
+        right 0
+        bottom .6rem
+        .left
+        .right
+            top 0
+            width auto
+            position relative
+        .right
+            padding .1rem
+        .fbi
+            padding .2rem .2rem 0 2.2rem
+            height 4rem
+            margin .2rem -.2rem
+            h1
+                font-size .6rem
+        .frame
+            position relative
+            height 60vh
+            z-index 9999
+
+.router-view
+    width 100%
+
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active
+    will-change transform
+    transition all .2s ease-in
+    position absolute
+
+.slide-none-leave-active
+    opacity 0
+    display none
+
+.slide-none-enter
+    display inline
+
+.slide-right-enter
+    opacity 0
+    transform translate3d(-100%, 0, 0)
+
+.slide-right-leave-active
+    opacity 0
+    transform translate3d(100%, 0, 0)
+
+.slide-left-enter
+    opacity 0
+    transform translate3d(100%, 0, 0)
+
+.slide-left-leave-active
+    opacity 0
+    transform translate3d(-100%, 0, 0)
+
+
+
+//@media (max-width: 768px)
+//    header
+//        .right
+//        .menu
+//        .search
+//            display none
+//
+//    .ishome header
+//        .back
+//        .close
+//            display none
+
+.ICP
+    background #111
+    width 100%
+    font-size .14rem
+    text-align center
+    padding-bottom .5rem
+    .li
+        display inline-block
+        margin .2rem .2rem
+
+@media (min-width: 768px)
+    ::-webkit-scrollbar
+        width:10px;
+        height:10px;
+    /*定义滚动条轨道
+     内阴影+圆角*/
+    ::-webkit-scrollbar-track
+        background #0009
+    ::-webkit-scrollbar-corner
+        background #0009
+    /*定义滑块
+     内阴影+圆角*/
+    ::-webkit-scrollbar-thumb
+        background-color: #333
+
+    .ICP
+        position fixed
+        z-index 9
+        bottom 0
+        padding-bottom .1rem
+
+
+for $i in 0..5
+    .cover_bg[type=\" {$i}\"]
+        background-image url("../images/cover" + $i + ".jpg")
+

@@ -1,0 +1,64 @@
+{
+    "name": "admin",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "vue-cli-service serve --port 8066",
+        "build": "vue-cli-service build && rm -rf /Users/yangshu/jiapu/admin/* && cp -R -f dist/* /Users/yangshu/jiapu/admin/ && cd /Users/yangshu/jiapu/admin/ && anywhere 8063",
+        "bd": "vue-cli-service build && rm -rf /Users/yangshu/jiapu/admin/* && cp -R -f dist/* /Users/yangshu/jiapu/admin/ && cd /Users/yangshu/jiapu/admin/",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "crypto-js": "^4.0.0",
+        "element-ui": "^2.13.2",
+        "fingerprintjs2": "^2.1.2",
+        "html-to-md": "^0.3.5",
+        "js-md5": "^0.7.3",
+        "marked": "^1.1.1",
+        "vue": "^2.6.11",
+        "vue-amap": "^0.5.10",
+        "vue-clipboard2": "^0.3.1",
+        "vue-dayjs": "^1.0.2",
+        "vue-router": "^3.3.4",
+        "vue-toastification": "^1.7.6",
+        "vuex": "^3.5.1",
+        "wangeditor": "^3.1.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.4.0",
+        "@vue/cli-plugin-eslint": "~4.4.0",
+        "@vue/cli-service": "~4.4.0",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-component": "^1.1.1",
+        "core-js": "^3.6.5",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "pug": "^3.0.0",
+        "pug-plain-loader": "^1.0.0",
+        "stylus": "^0.54.8",
+        "stylus-loader": "^3.0.2",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {
+            "no-unused-vars": "off"
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}

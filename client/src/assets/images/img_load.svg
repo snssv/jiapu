@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="d1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BECFBD;}
+	.st1{fill:#F4FFF1;}
+	.st2{font-family:'MicrosoftYaHeiUILight';}
+</style>
+<g id="XMLID_1_">
+	<path id="XMLID_9_" class="st0" d="M76.8,21.7H23.2c-2.1,0-3.8,1.7-3.8,3.8v45.4c0,2.1,1.8,3.8,3.8,3.8h53.7c2.1,0,3.8-1.7,3.8-3.8
+		V25.5C80.6,23.4,78.9,21.7,76.8,21.7z M78.4,70.9c0,0.9-0.7,1.6-1.6,1.6H23.2c-0.9,0-1.6-0.7-1.6-1.6V25.5c0-0.9,0.7-1.6,1.6-1.6
+		h53.7c0.9,0,1.6,0.7,1.6,1.6V70.9z"/>
+	<path id="XMLID_10_" class="st0" d="M63.3,40.6c3.2,0,5.8-2.6,5.8-5.7c0-3.1-2.6-5.7-5.8-5.7c-3.2,0-5.8,2.6-5.8,5.7
+		C57.6,38.1,60.1,40.6,63.3,40.6z"/>
+	<polygon id="XMLID_11_" class="st0" points="55.7,55.8 40.4,36.9 27,59.6 27,67.1 73,67.1 73,44.4 59.5,55.8 	"/>
+</g>
+</svg>

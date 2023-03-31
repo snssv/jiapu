@@ -1,0 +1,72 @@
+{
+    "name": "jiapuu.com",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "vue-cli-service serve --port 8060",
+        "build": "vue-cli-service build && rm -rf /Users/yangshu/jiapu/client/* && cp -R -f dist/* /Users/yangshu/jiapu/client/ && cd /Users/yangshu/jiapu/client/ && anywhere 8061",
+        "bd": "vue-cli-service build && rm -rf /Users/yangshu/jiapu/client/* && cp -R -f dist/* /Users/yangshu/jiapu/client/ && cd /Users/yangshu/jiapu/client/",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "crypto-js": "^4.0.0",
+        "date-fns": "^2.15.0",
+        "fingerprintjs2": "^2.1.2",
+        "js-md5": "^0.7.3",
+        "marked": "^1.1.1",
+        "socket.io-client": "^2.3.0",
+        "vue": "^2.6.11",
+        "vue-amap": "^0.5.10",
+        "vue-clipboard2": "^0.3.1",
+        "vue-dayjs": "^1.0.2",
+        "vue-mescroll": "^0.0.4",
+        "vue-router": "^3.3.4",
+        "vue-toastification": "^1.7.6",
+        "vue-tree-chart": "^1.2.9",
+        "vuex": "^3.5.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.4.0",
+        "@vue/cli-plugin-eslint": "~4.4.0",
+        "@vue/cli-service": "~4.4.0",
+        "babel-eslint": "^10.1.0",
+        "core-js": "^3.6.5",
+        "eslint": "^6.7.2",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-vue": "^6.2.2",
+        "node-sass": "^4.14.1",
+        "prettier-eslint": "^13.0.0",
+        "pug": "^3.0.0",
+        "pug-plain-loader": "^1.0.0",
+        "sass-loader": "^9.0.3",
+        "stylus": "^0.54.8",
+        "stylus-loader": "^3.0.2",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "globals": {
+            "changeDate": true
+        },
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {
+            "no-unused-vars": "off",
+            "no-console": "off"
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}

@@ -1,0 +1,224 @@
+.date_bar
+    height .36rem
+    border 1px solid #111
+    border-radius .04rem
+    background $c2
+    padding 0 .1rem
+    font-size .16rem
+    line-height .36rem
+    position relative
+    color #999
+    .val
+        width 1rem
+
+    i
+        position absolute
+        right .1rem
+        top .06rem
+        font-size .2rem
+    span,i
+        cursor pointer
+        &:hover
+            color $lv
+    b
+        opacity .4
+        font-weight normal
+
+.calendar
+    position fixed
+    z-index 10009
+    width 100%
+    height 100%
+    top 0
+    left 0
+    background #2229
+    transition .12s
+    &:not(.show)
+        opacity 0
+        transform translate3d(0,-200%,0)
+
+.ys_calendar
+    width 6.6rem
+    max-width 100%
+    height 6.2rem
+    position relative
+    background #000
+    margin 1rem auto 0 auto
+    border-radius .05rem
+    overflow hidden
+    .sty_date
+        color #366956
+    .sty_date2
+        color #f3a960
+    .tag_a
+        color #af4f1c
+    .tag_b
+        color #3eb3ca
+    .icon-close
+    .btnx
+        cursor pointer
+        position absolute
+        &:hover
+            opacity .8
+    .icon-close
+        color #eee
+        top .2rem
+        right .2rem
+        font-size .2rem
+    .back_today
+        right .7rem
+        background $tml
+        color #666
+    .btnx
+        top .25rem
+        font-size .18rem
+        padding .05rem .2rem
+        border 1px solid $tml
+        border-radius .02rem
+    .toggle_dynasty
+        left .25rem
+        background #022d36
+        white-space nowrap
+        color #ddd
+        i
+            font-size .2rem
+            margin 0 -.1rem 0 .05rem
+    .btns
+        i
+            position absolute
+            font-size .3rem
+            top .9rem
+            color #777
+            cursor pointer
+            &:hover
+                color #888
+        .icon-angle-double-left
+            left .1rem
+        .icon-angle-left
+            left .5rem
+
+        .icon-angle-double-right
+            right .1rem
+        .icon-angle-right
+            right .5rem
+    .head
+        height .5rem
+        text-align center
+        font-size .18rem
+        color #999
+        *
+            vertical-align middle
+        input
+            width 1rem
+            margin 0 .05rem
+            height .35rem
+            font-size .18rem
+    h1
+        margin .2rem
+        line-height .5rem
+        text-align center
+        font-size .3rem
+        color #fff4
+
+    h2
+        text-align center
+        font-size .14rem
+        margin 0
+        color #777
+        background #fff1
+        padding .1rem
+        line-height 1
+        *
+            vertical-align middle
+        b
+            //vertical-align text-bottom
+            color $lv
+
+    table
+        width 100%
+        text-align center
+        border-collapse collapse
+        font-size .12rem
+    th
+        width 14%
+        color #999
+    td
+        cursor pointer
+        line-height 1
+        position relative
+        border 1px solid #222
+        padding .13rem 0 0 0
+        &:hover
+            background #fff1
+        &:empty:hover
+            background #000
+            cursor default
+        &.onset
+            background #0d3b27
+            p,h3,b
+                color #fff
+            p span
+                color #efc
+    p ,h3
+        margin .05rem auto
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        max-width 1rem
+
+    h3
+        font-size .28rem
+        font-family Arial
+    td b
+        position absolute
+        right .04rem
+        top .05rem
+        opacity .6
+        font-size .12rem
+        font-weight 100
+    @media screen and (max-width :768px)
+        h3,p
+            max-width .64rem
+
+.dynasty_box
+    position absolute
+    top .8rem
+    left 0
+    z-index 4
+    bottom 0
+    right 0
+    background #022d36
+    border-top 1px solid $tml
+    border-radius 0 0 .05rem .05rem
+    overflow-x auto
+    white-space nowrap
+    font-size .12rem
+    &:not(.show)
+        display none
+    .list
+        width .46rem
+        display inline-block
+        vertical-align top
+        padding 0 1px
+        text-align center
+        h5
+            margin 0
+            font-size .12rem
+            font-weight 100
+            line-height .3rem
+            color #fff
+            background #fff2
+        ul
+            list-style none
+            margin 0
+            padding 0
+            overflow hidden
+            li
+                cursor pointer
+                padding .03rem
+                color #cedbdc
+                background #fff1
+                margin 1px 0
+                &:hover
+                    background #142c2e
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name=”description” content=”家谱网，连接祖祖辈辈亲朋好友”/>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="dns-prefetch" href="//api.jiapuu.com">
+    <link rel="dns-prefetch" href="//cdn.jiapuu.com">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+    window.onload=function () {
+        document.addEventListener('touchstart',function (event) {
+            if(event.touches.length>1){
+                event.preventDefault();
+            }
+        });
+
+        var lastTouchEnd=0;
+        document.addEventListener('touchend',function (event) {
+            var now=(new Date()).getTime();
+            if(now-lastTouchEnd<=300){
+                event.preventDefault();
+            }
+            lastTouchEnd=now;
+        },false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+        const ua = window.navigator.userAgent.toLowerCase();
+        //通过正则表达式匹配ua中是否含有MicroMessenger字符串
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            alert('由于微信浏览器的单标签模式及页面强缓存可能导致某些页面的内容错误，建议您点击右上角菜单，选择"在浏览器打开"，祝使用愉快。')
+        }
+    }
+    </script>
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<script async src="yscalendar.js"></script>
+<p style="display: none">
+    <!--<script async src="https://s9.cnzz.com/z_stat.php?id=1279231453&web_id=1279231453"></script>-->
+</p>
+</body>
+</html>

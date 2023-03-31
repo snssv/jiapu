@@ -1,0 +1,17 @@
+{
+    "name": "1jia",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "pm2 start /Users/yangshu/jiapu/server/main.js --name='jiapu'",
+        "bc": "cd client && yarn build",
+        "ba": "cd admin && yarn build",
+        "bs": "cd server && nest build",
+        "bd": "cd client && yarn bd && cd /Users/yangshu/nest/qingyuan/admin && yarn bd && cd /Users/yangshu/nest/qingyuan/server && yarn bd && cd /Users/yangshu/jiapu/ && git add . && git commit -m 'auto' && git push",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
